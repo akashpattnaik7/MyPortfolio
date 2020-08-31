@@ -4,8 +4,8 @@ html{
 body{
 	overflow-x: hidden;
 	font-family: 'Open Sans', sans-serif;
-	color: #fff; 
-	background-color: #0a0a0a;
+	color: #F7F7F7; 
+	background-color: #0A0A0A;
 }
 .offset:before{
 	display: block;
@@ -17,17 +17,17 @@ body{
 /*--Navigation--*/
 .navbar{
 	text-transform: uppercase;
-	font-weight: 800;
 	font-size: .9rem; 
 	letter-spacing: .1rem;
-	background: rgba(0,0,0,0.6)!important;
+	background: rgba(0,0,0,0.9)!important;
 }
 .navbar-brand{
-	height: 2em;
-	padding-top: .5rem;
+	height: 2.2em;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	font-family: 'Orbitron', sans-serif;
-	margin-left: 100px;
-	font-size: 2em;
+	margin-left: 70px;
+	font-size: 2.3em;
 }
 .navbar-brand:hover{
 	color: #DAA520;
@@ -36,12 +36,8 @@ body{
 	padding-right: .7rem;
 }
 #navbarNav{
-	padding-right: 100px;
+	padding-right: 70px;
 }
-.nav-item{
-	font-weight: 700;
-}
-
 .navbar-dark .navbar-nav .nav-link{
 	color: white;
 	padding-top: .8rem;
@@ -49,11 +45,11 @@ body{
 .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link:hover{
 	color: 	#DAA520;
 }
+/*--End navigation--*/
 
 /*--Landing page--*/
 .home-inner{
 	background-image: url(img/home.png); 
-	width: 100%;
 }
 .caption{
 	width:100%;
@@ -92,11 +88,11 @@ body{
 	border-color: #DAA520;
 	color: black;
 }
-
+/*--End landing--*/
 
 /*--Feature--*/
 .narrow{
-	width: 85%;
+	width: 90%;
 	margin: 1.5rem auto;
 	padding-top: 2rem;
 }
@@ -134,7 +130,7 @@ h3{
 	width: 100%;
 }
 .dark{
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.65);
 	color: white;
 	padding: 8rem 2rem;
 }
@@ -143,8 +139,58 @@ fixed-background p{
 	font-weight: 1.1rem;
 	padding-bottom: 5rem;
 }
+/*--End feature--*/
 
-/**--Contact section--*/
+/*--Project section--*/
+.project-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.project-info{
+	padding:30px ;
+	flex-basis: 50%;
+	background-color: #262626;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+.project-info h2{
+	padding-bottom: 5px; 
+	font-weight: bold;
+}
+.project-img{
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: relative;
+}
+.project-img:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #272727;
+	opacity: .4;
+}
+ .project-img:hover img{
+	transform: scale(1.1);
+}
+.project-img img{
+	transition: .3s ease ;
+}
+/*--End Project--*/
+
+/*--Contact section--*/
 footer{
 	padding: 2rem 0 ;
 	margin-top: .5rem;
@@ -172,6 +218,8 @@ footer a{
 	border-top: .2rem solid #666b71;
 	margin-top: 3rem;
 }-*/
+/*--End contact
+
 
 /*-- Media queries--*/
 
