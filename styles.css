@@ -62,13 +62,14 @@ body{
 
 /*--Landing page--*/
 .home-inner{
-	background-image: url(img/pillow.jpg); 
+	background-image: url(img/create.jpg); 
 }
 .caption{
 	width:100%;
 	max-width: 100%;
 	position: absolute;
 	top: 38%;
+	left: 10%;
 	z-index: 1;
 	color: white;
 	text-transform: uppercase;
@@ -136,12 +137,6 @@ h3{
 	font-weight: 900;
 }
 
-.fixed{
-	background-image: url(img/img1.png);
-	z-index: -1;
-	width: 100%;
-}
-
 .fixed-background p{
 	font-size: .9em;
 	font-weight: 1.2rem;
@@ -158,7 +153,6 @@ h3{
 	margin-bottom: 0;
 }
 .p-wrapper{
-	background-color: #1f1f1f;
 	position: relative;
 	overflow: hidden;
 	height: 240px;
@@ -176,17 +170,18 @@ h3{
 	display: flex;
 	flex-direction: column;
 	background-color: #101010;
-	display: none;
+	opacity: 0;
+}
+.p-wrapper:hover .text-overlay{
+	display: flex;
+	opacity: 1;
+
 }
 .text-overlay .overlay-button{
 	color: #fff;
 	text-align: center;
 	display: flex;
 	font-weight: bold;
-
-
-}
-.text-overlay .cta-button{
 	border-radius: 5px;
 	border: 1.5px solid #2c4bff;
 	padding: .5rem 1rem;
@@ -197,23 +192,30 @@ h3{
 	min-width: 6em; 
 	transition: .5s ease;
 	text-decoration: none;
+	z-index: 200;
 
 }
-.cta-button:hover{
+
+.overlay-button:hover{
 	border-color: #2c4bff;
 	background-color: #2c4bff;
 	color:white;
 }
 
-.p-wrapper:hover .text-overlay{
-	display: flex;
-	opacity: .95;
-	transition: .5s;
+
+.img-wrapper{
+	width: 100%;
+	height: 100%;
 }
-.p-wrapper img{
+.img-wrapper img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	opacity: 1;
+	transition: opacity .4s;
+}
+.p-wrapper:hover .img-wrapper img{
+	opacity: 0;
 }
 .arrow-right{
 	padding-left: 5px;
@@ -309,17 +311,18 @@ h3{
 
 /*--Footer section--*/
 footer{
-	background: #1A1A1A;
+	background: #F5F5F5;
 	color: #767676; 
 }
-
+.bar{
+	border: 1px solid #e0e0e0;
+}
 .copyright-text {
   font-size: .9rem;
   text-align: center;
   margin-bottom: 0;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: .075rem;
+  letter-spacing: .07rem;
 }
 .copyright-text span{
 	color: #2c4bff;
@@ -362,6 +365,10 @@ footer{
 	}
 	.navbar-brand{
 		padding-top: 0.2rem;
+	}
+	.caption{
+		left: 0;
+		text-align: center;
 	}
 	.caption h1{
 	font-size: 2.3rem;
@@ -420,8 +427,8 @@ h3{
 	border-bottom: 0;
 }
 .copyright-text{
-	font-size: .75rem !important;
-	letter-spacing: .025rem;
+	font-size: .775rem !important;
+	letter-spacing: .02rem;
 }
 }
 
